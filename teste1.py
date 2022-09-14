@@ -1,13 +1,13 @@
 from intpy.intpy import initialize_intpy, deterministic
-import numpy as np
 import time
 import sys
+import numpy as np
 
 
 @deterministic
 def get_empirical_CVaR(rewards, alpha = 0.9):
     
-    a = sorted(list(rewards).copy(), reverse= True)
+    a = sorted((rewards).copy(), reverse= True)
 
     p = 1. * (np.arange(len(a)) + 1) / len(a)
     q_a = a[np.where(p >= (1 - alpha) )[0][0]]
@@ -30,7 +30,7 @@ def main(rewards):
   
 
 if __name__ == "__main__":
-    n = int(sys.argv[1])
+    n = list(sys.argv[1])
     start = time.perf_counter()
     main(n)
     print(time.perf_counter()-start)
