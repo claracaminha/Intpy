@@ -27,7 +27,6 @@ if __name__ == "__main__":
     n.pop()
     for i in range(len(n)):
       n[i]=n[i][:-1]
-    print(n)
     start = time.perf_counter()
     main(n)
     print(time.perf_counter()-start)
