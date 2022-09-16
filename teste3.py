@@ -217,14 +217,15 @@ def main(n1, n2, n3, n4, n5, n6, n7, n8):
 
 
 if __name__ == "__main__":
-    n1 = (sys.argv[2])
-    n2 = (sys.argv[3])
-    n3 = (sys.argv[4])
-    n4 = (sys.argv[5])
-    n5 = (sys.argv[6])
-    n6 = (sys.argv[7])
-    n7 = (sys.argv[8])
-    n8 = (sys.argv[9])
+    n1 = int(sys.argv[1])
+    n2 = int(sys.argv[2])
+    n3 = int(sys.argv[3])
+    n4 = int(sys.argv[4])
+    n5 = int(sys.argv[5])
+    n6 = int(sys.argv[6])
+    n7 = int(sys.argv[7])
+    n8 = int(sys.argv[8])
+    
     start = time.perf_counter()
     main(n1, n2, n3, n4, n5, n6, n7, n8)
     print(time.perf_counter()-start)
