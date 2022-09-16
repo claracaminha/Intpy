@@ -208,7 +208,11 @@ def cubic( p1, p2, p3, p4 ):
 
 
 @initialize_intpy(__file__)
-def main(p1, p2, p3, p4):
+def main(n1, n2, n3, n4, n5, n6, n7, n8):
+    p1 = (n1,n2)
+    p2 = (n3,n4)
+    p3 = (n5,n6)
+    p4 = (n7,n8)
     print(cubic( p1, p2, p3, p4 ))
 
 
@@ -217,6 +221,10 @@ if __name__ == "__main__":
     n2 = (sys.argv[3])
     n3 = (sys.argv[4])
     n4 = (sys.argv[5])
+    n5 = (sys.argv[6])
+    n6 = (sys.argv[7])
+    n7 = (sys.argv[8])
+    n8 = (sys.argv[9])
     start = time.perf_counter()
-    main(n1, n2, n3, n4)
+    main(n1, n2, n3, n4, n5, n6, n7, n8)
     print(time.perf_counter()-start)
