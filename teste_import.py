@@ -1,6 +1,9 @@
 from intpy.intpy import initialize_intpy, deterministic
 import numpy as np
 import time
+import os
+
+os.system("pip install numpy")
 
 @deterministic
 def get_empirical_CVaR(rewards, alpha = 0.9):
