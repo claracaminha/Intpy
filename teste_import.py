@@ -1,6 +1,7 @@
 from intpy.intpy import initialize_intpy, deterministic
 import time
 import os
+import sys
 
 os.system("pip install numpy")
 import numpy as np
