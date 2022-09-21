@@ -9,6 +9,11 @@ def get_empirical_CVaR(rewards, alpha = 0.9):
     
     a = sorted(list(rewards).copy(), reverse= True)
 
+    for i in range(len(a)):
+      a[i] = int(a[i])
+
+    a = np.array(a)
+
     p = 1. * (np.arange(len(a)) + 1) / len(a)
     q_a = a[np.where(p >= (1 - alpha) )[0][0]]
 
@@ -22,6 +27,7 @@ def get_empirical_CVaR(rewards, alpha = 0.9):
         temp = a[:ind + 1]
 
     return (sum(temp) / len(temp))  
+    
    
  
 
