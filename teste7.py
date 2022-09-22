@@ -6,7 +6,7 @@ import itertools
 @deterministic
 def chunks(l):
     """Divide a list of nodes `l` in `n` chunks"""
-    n=len(l)/2
+    n=int(len(l)/2)
     l_c = iter(l)
     while 1:
         x = tuple(itertools.islice(l_c, n))
