@@ -4,8 +4,9 @@ import sys
 import itertools
 
 @deterministic
-def chunks(n, l):
+def chunks(l):
     """Divide a list of nodes `l` in `n` chunks"""
+    n=len(l)/2
     l_c = iter(l)
     while 1:
         x = tuple(itertools.islice(l_c, n))
@@ -15,16 +16,15 @@ def chunks(n, l):
       
       
  @initialize_intpy(__file__)
-def main(n,l):
-    print(chunks(n, l))
+def main(l):
+    print(chunks(l))
     
 if __name__ == "__main__":
-    n = (sys.argv[2])
-    l = (sys.argv[4:])
+    l = (sys.argv[2:])
     l.pop()
     l.pop()
     for i in range(len(l)):
       l[i]=l[i][:-1]
     start = time.perf_counter()
-    main(n)
+    main(l)
     print(time.perf_counter()-start)
