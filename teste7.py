@@ -15,7 +15,7 @@ def chunks(l):
         return x
       
       
- @initialize_intpy(__file__)
+@initialize_intpy(__file__)
 def main(l):
     print(chunks(l))
     
