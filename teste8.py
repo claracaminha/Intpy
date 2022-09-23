@@ -15,7 +15,7 @@ def median(vals):
     #are we odd?
     if float(idx1) != count/2.0:
         idx1 = idx2
-    return (vals[idx1]+vals[idx2])/2.0 
+    return int(vals[idx1]+vals[idx2])/2.0 
     
    
  
